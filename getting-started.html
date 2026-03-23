@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快速开始 - 在线学习平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h2::before {
+            font-size: 1.3em;
+        }
+
+        .step {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .step h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .step p {
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .alert {
+            background: #e8f4f8;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .alert strong {
+            color: #2196F3;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .highlight strong {
+            color: #ff9800;
+        }
+
+        .success {
+            background: #c8e6c9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+            color: #2e7d32;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        table th {
+            background: #f5f5f5;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table tr:hover {
+            background: #f9f9f9;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .feature {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+
+        .feature strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .button-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 快速开始指南</h1>
+            <p>在线学习平台 - 部署和管理</p>
+        </header>
+
+        <div class="content">
+            <!-- 介绍 -->
+            <div class="section">
+                <h2>👋 欢迎！</h2>
+                <p>本平台已为您准备好了所有资源。现在您可以：</p>
+                <div class="feature-list">
+                    <div class="feature">
+                        <strong>✅ 本地运行</strong>
+                        在电脑上立即查看网站
+                    </div>
+                    <div class="feature">
+                        <strong>🌐 全球访问</strong>
+                        部署到云端供他人访问
+                    </div>
+                    <div class="feature">
+                        <strong>📱 移动适配</strong>
+                        自动适配各类设备
+                    </div>
+                    <div class="feature">
+                        <strong>🔄 在线更新</strong>
+                        修改即时生效
+                    </div>
+                </div>
+            </div>
+
+            <!-- 本地运行 -->
+            <div class="section">
+                <h2>⚡ 第一步：本地运行</h2>
+                
+                <div class="step">
+                    <h3>方式1️⃣ - Python（推荐，无需安装）</h3>
+                    <p>最简单快速的方式：</p>
+                    <div class="code">python server.py</div>
+                    <div class="alert">
+                        <strong>💡 提示：</strong> 浏览器会自动打开。如未打开，访问 http://localhost:8000
+                    </div>
+                </div>
+
+                <div class="step">
+                    <h3>方式2️⃣ - Node.js（备选方案）</h3>
+                    <p>如果安装了Node.js：</p>
+                    <div class="code">node server.js</div>
+                    <div class="alert">
+                        <strong>💡 提示：</strong> 显示网址后，自动打开浏览器
+                    </div>
+                </div>
+
+                <div class="success">
+                    <strong>✅ 成功标志：</strong> 
+                    <ul style="margin-top: 8px; margin-left: 20px;">
+                        <li>看到漂亮的首页和各个课程链接</li>
+                        <li>可以点击链接打开各个页面</li>
+                        <li>在手机WiFi中也可以访问</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 部署选项 -->
+            <div class="section">
+                <h2>🌍 第二步：部署到公网</h2>
+                
+                <p>让全球的人都能访问你的网站！选择以下任一方式：</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>平台</th>
+                            <th>难度</th>
+                            <th>费用</th>
+                            <th>优点</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Vercel</strong></td>
+                            <td>⭐ 最简</td>
+                            <td>免费</td>
+                            <td>自动部署，速度快</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Netlify</strong></td>
+                            <td>⭐⭐ 简</td>
+                            <td>免费</td>
+                            <td>功能丰富，支持好</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GitHub Pages</strong></td>
+                            <td>⭐⭐ 简</td>
+                            <td>免费</td>
+                            <td>与代码同步</td>
+                        </tr>
+                        <tr>
+                            <td><strong>000webhost</strong></td>
+                            <td>⭐⭐⭐ 中</td>
+                            <td>免费</td>
+                            <td>功能完整</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="step">
+                    <h3>推荐方案：Vercel（最简单）</h3>
+                    <p><strong>第1步：</strong> 拥有GitHub账户 → https://github.com</p>
+                    <p><strong>第2步：</strong> 创建新仓库上传这些文件</p>
+                    <p><strong>第3步：</strong> 访问 Vercel → https://vercel.com</p>
+                    <p><strong>第4步：</strong> 选择 "New Project" → 选择你的GitHub仓库 → Deploy</p>
+                    <div class="alert">
+                        <strong>⏱️ 等待：</strong> 通常1-2分钟后获得网址，如 https://myproject.vercel.app
+                    </div>
+                </div>
+
+                <div class="step">
+                    <h3>完成后的效果</h3>
+                    <ul style="margin-left: 20px; line-height: 2;">
+                        <li>✅ 任何人都能访问你的网站</li>
+                        <li>✅ 使用https安全连接</li>
+                        <li>✅ 自动配置CDN加速</li>
+                        <li>✅ 修改文件自动重新部署</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 在手机访问 -->
+            <div class="section">
+                <h2>📱 在手机上访问（同一WiFi）</h2>
+                
+                <div class="step">
+                    <h3>步骤</h3>
+                    <p><strong>1.</strong> 电脑和手机连接同一个WiFi</p>
+                    <p><strong>2.</strong> 在电脑的终端运行命令后，会显示：</p>
+                    <div class="code">🌐 局域网访问: http://192.168.1.100:8000</div>
+                    <p><strong>3.</strong> 在手机浏览器输入这个地址</p>
+                    <div class="success">
+                        <strong>💡 注意：</strong> 不同WiFi下IP地址可能不同，重新运行server会显示新IP
+                    </div>
+                </div>
+            </div>
+
+            <!-- 常见问题 -->
+            <div class="section">
+                <h2>❓ 常见问题</h2>
+                
+                <div class="step">
+                    <h3>Q: Python/Node.js运行出错</h3>
+                    <p>确保已安装Python 3.6+ 或 Node.js 14+</p>
+                    <p>检查命令：</p>
+                    <div class="code">python --version
+node --version</div>
+                </div>
+
+                <div class="step">
+                    <h3>Q: 端口8000被占用</h3>
+                    <p>修改server.py或server.js中的PORT值，改为8080, 9000等</p>
+                </div>
+
+                <div class="step">
+                    <h3>Q: 浏览器未自动打开</h3>
+                    <p>手动访问 http://localhost:8000</p>
+                </div>
+
+                <div class="step">
+                    <h3>Q: 是否需要付费？</h3>
+                    <p>❌ 完全免费！所有方案（本地运行、Vercel、Netlify等）都免费</p>
+                </div>
+            </div>
+
+            <!-- 下一步 -->
+            <div class="section">
+                <h2>🎯 完成清单</h2>
+                
+                <div style="background: #f0f7ff; padding: 20px; border-radius: 6px;">
+                    <label style="display: block; margin: 10px 0; cursor: pointer;">
+                        <input type="checkbox" style="margin-right: 10px;"> 
+                        ✅ 使用Python/Node.js本地运行
+                    </label>
+                    <label style="display: block; margin: 10px 0; cursor: pointer;">
+                        <input type="checkbox" style="margin-right: 10px;"> 
+                        ✅ 访问 http://localhost:8000 查看首页
+                    </label>
+                    <label style="display: block; margin: 10px 0; cursor: pointer;">
+                        <input type="checkbox" style="margin-right: 10px;"> 
+                        ✅ 浏览所有课程和资源页面
+                    </label>
+                    <label style="display: block; margin: 10px 0; cursor: pointer;">
+                        <input type="checkbox" style="margin-right: 10px;"> 
+                        ✅ 在手机上测试访问
+                    </label>
+                    <label style="display: block; margin: 10px 0; cursor: pointer;">
+                        <input type="checkbox" style="margin-right: 10px;"> 
+                        ✅ 部署到Vercel/Netlify获得公网地址
+                    </label>
+                    <label style="display: block; margin: 10px 0; cursor: pointer;">
+                        <input type="checkbox" style="margin-right: 10px;"> 
+                        ✅ 分享网址给其他人访问
+                    </label>
+                </div>
+            </div>
+
+            <!-- 快速链接 -->
+            <div class="section">
+                <h2>🔗 快速链接</h2>
+                <div class="button-group">
+                    <a href="index.html" class="btn btn-primary">📚 查看首页</a>
+                    <a href="README.md" class="btn btn-secondary">📖 查看完整文档</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2024 在线学习平台 | 快速开始指南</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">需要帮助？查看README.md获取更多信息</p>
+        </footer>
+    </div>
+</body>
+</html>

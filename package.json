@@ -1,0 +1,22 @@
+{
+  "name": "online-learning-platform",
+  "version": "1.0.0",
+  "description": "在线学习平台 - Web资源中心",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "education",
+    "learning",
+    "courses",
+    "online-platform"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
