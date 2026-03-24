@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高等数学课程详细介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", "SimHei", Arial, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header-subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        h2 {
+            color: #f5576c;
+            border-bottom: 3px solid #f5576c;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            font-size: 1.5em;
+        }
+        
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        
+        p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        
+        .topic-list {
+            background: #fff0f5;
+            border-left: 4px solid #f5576c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .topic-list li {
+            list-style: none;
+            padding: 10px 0;
+            border-bottom: 1px dotted #ffc0d9;
+        }
+        
+        .topic-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .topic-list li:before {
+            content: "◆ ";
+            color: #f5576c;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .objectives, .outcomes, .resources {
+            background: #fff5f7;
+            border-left: 4px solid #f5576c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .objectives ul, .outcomes ul, .resources ul {
+            margin: 10px 0;
+        }
+        
+        .objectives li, .outcomes li, .resources li {
+            list-style-position: inside;
+            margin-bottom: 10px;
+        }
+        
+        .btn-group {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #f5576c;
+            font-size: 1em;
+        }
+        
+        .btn-primary {
+            background: #f5576c;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #f093fb;
+            border-color: #f093fb;
+            transform: scale(1.05);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #f5576c;
+        }
+        
+        .btn-secondary:hover {
+            background: #fff5f7;
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        
+        .highlight {
+            background: #ffeaa7;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📐 高等数学</h1>
+            <p class="header-subtitle">Advanced Mathematics - Professional Introduction</p>
+        </header>
+        
+        <div class="content">
+            <h2>课程概览</h2>
+            <p>
+                《高等数学》课程是理工科各专业和经济管理专业类学生的必修课。
+                随着科学技术的迅猛发展，数学正日益成为各学科进行科学研究的重要手段和工具。
+                高等数学是近代数学的基础，也是现代科学技术、经济管理、人文科学中应用最广泛的一门课程。
+                本课程为学生奠定良好的数学基础，培养数学思维能力和解决实际问题的能力。
+            </p>
+            
+            <h2>课程重要性</h2>
+            <p>
+                高等数学作为学生进入大学后学习的第一门重要的数学基础课，其重要性主要体现在：
+            </p>
+            <ul>
+                <li>为后续专业课程（如物理、化学、工程计算等）的学习提供必要的数学工具</li>
+                <li>培养科学思维能力和逻辑推理能力</li>
+                <li>为学生终身学习和专业发展奠定坚实基础</li>
+                <li>在现代科技应用中不可或缺</li>
+            </ul>
+            
+            <h2>学习目标</h2>
+            <div class="objectives">
+                <ul>
+                    <li>掌握微积分的基本理论和方法</li>
+                    <li>理解极限、连续性、导数等核心概念</li>
+                    <li>学会应用微积分解决实际问题</li>
+                    <li>培养数学建模能力</li>
+                    <li>提升逻辑思维和分析解决问题的能力</li>
+                    <li>为学习专业课程奠定坚实的数学基础</li>
+                </ul>
+            </div>
+            
+            <h2>主要学习内容</h2>
+            <div class="topic-list">
+                <ul>
+                    <li><span class="highlight">函数与极限</span> - 函数的基本概念、性质；极限的定义、性质和四则运算</li>
+                    <li><span class="highlight">连续函数</span> - 函数的连续性、间断点分析</li>
+                    <li><span class="highlight">导数和微分</span> - 导数的定义、几何意义；导数的计算和应用</li>
+                    <li><span class="highlight">导数的应用</span> - 函数的单调性、极值、凹凸性；最值问题</li>
+                    <li><span class="highlight">不定积分</span> - 原函数、不定积分的概念和计算方法</li>
+                    <li><span class="highlight">定积分</span> - 定积分的定义、性质；牛顿-莱布尼茨定理</li>
+                    <li><span class="highlight">积分应用</span> - 面积、体积、弧长等几何应用；物理应用</li>
+                    <li><span class="highlight">多元函数微积分</span> - 偏导数、全微分、二重积分等（选修内容）</li>
+                    <li><span class="highlight">微分方程</span> - 常微分方程的基本概念和求解方法（选修内容）</li>
+                    <li><span class="highlight">级数理论</span> - 数列级数、幂级数、泰勒级数等（选修内容）</li>
+                </ul>
+            </div>
+            
+            <h2>学习成果</h2>
+            <div class="outcomes">
+                <ul>
+                    <li><strong>理论理解：</strong>深入理解微积分的基本理论和概念</li>
+                    <li><strong>计算能力：</strong>熟练掌握各类题型的计算方法</li>
+                    <li><strong>应用能力：</strong>能够应用微积分知识解决实际工程和科学问题</li>
+                    <li><strong>思维能力：</strong>培养数学思维和逻辑推理能力</li>
+                    <li><strong>自学能力：</strong>学会利用教材和参考资料进行自主学习</li>
+                </ul>
+            </div>
+            
+            <h2>教学特点</h2>
+            <ul>
+                <li><strong>理论与实践相结合：</strong>重视数学理论的实际应用</li>
+                <li><strong>循序渐进：</strong>从基础概念逐步深化到应用</li>
+                <li><strong>多种教学方法：</strong>讲授、练习、小组讨论相结合</li>
+                <li><strong>使用现代工具：</strong>利用数学软件（如MATLAB、Mathematica等）辅助教学</li>
+                <li><strong>强化练习：</strong>大量习题训练，巩固所学知识</li>
+            </ul>
+            
+            <h2>学习建议</h2>
+            <ul>
+                <li>坚持课前预习，掌握基本概念</li>
+                <li>认真听讲，做好课堂笔记</li>
+                <li>及时完成作业，加深理解</li>
+                <li>定期复习，形成知识体系</li>
+                <li>主动提问，澄清疑难问题</li>
+                <li>参加辅导和讨论，学习他人的解题方法</li>
+                <li>适当使用数学软件进行验证和探索</li>
+            </ul>
+            
+            <h2>参考资源</h2>
+            <div class="resources">
+                <ul>
+                    <li>标准教材《高等数学》及其配套练习册</li>
+                    <li>教师编制的讲义和课件</li>
+                    <li>数学教学视频和在线课程平台</li>
+                    <li>数学软件工具（MATLAB、GeoGebra、Wolfram Alpha等）</li>
+                    <li>教师答疑和答疑论坛</li>
+                    <li>数学竞赛题和往年试题</li>
+                </ul>
+            </div>
+            
+            <h2>评估方式</h2>
+            <ul>
+                <li><strong>作业评估：</strong>定期布置和批改作业，占总分的20%</li>
+                <li><strong>课堂表现：</strong>考勤、参与讨论、回答问题，占总分的10%</li>
+                <li><strong>考试评估：</strong>期末笔试考试，占总分的70%</li>
+                <li><strong>选做项目：</strong>数学建模项目或小论文（可选），加分项</li>
+            </ul>
+            
+            <div class="btn-group">
+                <a href="courses.html" class="btn btn-primary">返回课程列表</a>
+                <a href="courses.html" class="btn btn-secondary">联系我们</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2026 高等数学课程中心 | Advanced Mathematics Course Center</p>
+            <p>以数学之名，启迪科学之光 | In Mathematics, Enlighten Scientific Discovery</p>
+        </footer>
+    </div>
+</body>
+</html>

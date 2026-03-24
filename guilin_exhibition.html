@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>桂林风景展览</title>
+    <style>
+        h3 {
+            color: red;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 120px;
+            line-height: 30px;
+            margin: 0;
+        }
+        .img-link {
+            display: block;
+            margin-top: 6px;
+            color: #1976d2;
+            text-decoration: underline;
+            font-size: 15px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .img-link:hover {
+            color: #d32f2f;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            border: 0px;
+            cursor: pointer;
+            transition: box-shadow 0.2s, border-radius 0.2s, transform 0.2s;
+        }
+        img:hover {
+            border-radius: 20px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            transform: translateY(-8px) scale(1.08);
+        }
+        /* 放大预览样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            width: auto;
+            height: 80vh;
+            max-width: 90vw;
+            border-radius: 8px;
+            border: 4px solid #fff;
+            box-shadow: 0 0 20px #000;
+        }
+    </style>
+</head>
+<body>
+    <h3>桂林山水风景图片</h3>
+    <ul>
+        <li>
+            <img src="images/image31.jpg" alt="桂林山水1" onclick="showModal('images/image31.jpg')">
+            <a class="img-link" onclick="showModal('images/image31.jpg')">桂林山水1</a>
+        </li>
+        <li>
+            <img src="images/image32.jpg" alt="桂林山水2" onclick="showModal('images/image32.jpg')">
+            <a class="img-link" onclick="showModal('images/image32.jpg')">桂林山水2</a>
+        </li>
+        <li>
+            <img src="images/image33.jpg" alt="桂林山水3" onclick="showModal('images/image33.jpg')">
+            <a class="img-link" onclick="showModal('images/image33.jpg')">桂林山水3</a>
+        </li>
+        <li>
+            <img src="images/image34.jpg" alt="桂林山水4" onclick="showModal('images/image34.jpg')">
+            <a class="img-link" onclick="showModal('images/image34.jpg')">桂林山水4</a>
+        </li>
+    </ul>
+    <!-- 放大预览模态框 -->
+    <div class="modal" id="imgModal" onclick="hideModal()">
+        <img id="modalImg" src="" alt="预览">
+    </div>
+    <script>
+        function showModal(src) {
+            var modal = document.getElementById('imgModal');
+            var modalImg = document.getElementById('modalImg');
+            modalImg.src = src;
+            modal.style.display = 'flex';
+        }
+        function hideModal() {
+            document.getElementById('imgModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

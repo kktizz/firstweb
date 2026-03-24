@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web前端技术新书推荐</title>
+    <style>
+        /* 标题样式 */
+        h1 {
+            text-align: center;
+            color: red;
+            border-bottom: 3px solid red;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        /* 鼠标悬停时浮动 */
+        img {
+            transition: all 0.3s ease;
+        }
+        
+        img:hover {
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 16px rgb(0, 0, 0, 0.8);
+            transform: scale(1.05);
+            border-radius: 30px;
+        }
+        
+        .float-left {
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .float-right {
+            float: right;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        /* 并排图片容器 */
+        .image-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .image-item {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+        }
+        
+        .image-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .image-item p {
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        /* iframe 样式 */
+        .preview-frame {
+            width: calc((250px + 20px) * 4);
+            height: 600px;
+            border-top: 3px solid red;
+            margin: 30px auto 0;
+            border-radius: 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web前端技术新书推荐</h1>
+    
+    <div class="image-container">
+        <div class="image-item">
+            <a href="发给学生的实验素材\ex_1_1\book1.html" onclick="loadFrame(this.href); return false;">
+                <img src="发给学生的实验素材\ex_1_1\book-1.jpg" alt="图片链接1">
+            </a>
+            
+        </div>
+        
+        <div class="image-item">
+            <a href="发给学生的实验素材\ex_1_1\book2.html" onclick="loadFrame(this.href); return false;">
+                <img src="发给学生的实验素材\ex_1_1\book-2.jpg" alt="图片链接2">
+            </a>
+          
+        </div>
+    
+        <div class="image-item">
+            <a href="发给学生的实验素材\ex_1_1\book3.html" onclick="loadFrame(this.href); return false;">
+                <img src="发给学生的实验素材\ex_1_1\book-3.jpg" alt="图片链接3">
+            </a>
+           
+        </div>
+        
+        <div class="image-item">
+            <a href="发给学生的实验素材\ex_1_1\book4.html" onclick="loadFrame(this.href); return false;">
+                <img src="发给学生的实验素材\ex_1_1\book-4.jpg" alt="图片链接4">
+            </a>
+           
+        </div>
+    </div>
+    
+    <!-- 预览框 -->
+    <iframe id="previewFrame" class="preview-frame"></iframe>
+    
+    <script>
+        function loadFrame(url) {
+            document.getElementById('previewFrame').src = url;
+        }
+    </script>
+</body></html>

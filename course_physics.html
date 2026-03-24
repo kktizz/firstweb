@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大学物理课程详细介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", "SimHei", Arial, sans-serif;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header-subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        h2 {
+            color: #00a8cc;
+            border-bottom: 3px solid #00a8cc;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            font-size: 1.5em;
+        }
+        
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        
+        p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        
+        .chapter-list {
+            background: #e0f7ff;
+            border-left: 4px solid #00a8cc;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .chapter-list li {
+            list-style: none;
+            padding: 10px 0;
+            border-bottom: 1px dotted #b3e5fc;
+        }
+        
+        .chapter-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .chapter-list li:before {
+            content: "✦ ";
+            color: #00a8cc;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .objectives, .outcomes, .resources {
+            background: #e1f5ff;
+            border-left: 4px solid #00a8cc;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .objectives ul, .outcomes ul, .resources ul {
+            margin: 10px 0;
+        }
+        
+        .objectives li, .outcomes li, .resources li {
+            list-style-position: inside;
+            margin-bottom: 10px;
+        }
+        
+        .btn-group {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #00a8cc;
+            font-size: 1em;
+        }
+        
+        .btn-primary {
+            background: #00a8cc;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #00f2fe;
+            border-color: #00f2fe;
+            color: #333;
+            transform: scale(1.05);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #00a8cc;
+        }
+        
+        .btn-secondary:hover {
+            background: #e1f5ff;
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        
+        .highlight {
+            background: #c9fef0;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚛️ 大学物理</h1>
+            <p class="header-subtitle">University Physics - Professional Introduction</p>
+        </header>
+        
+        <div class="content">
+            <h2>课程概览</h2>
+            <p>
+                以物理学基础为内容的大学物理课程，是理工科各专业学生一门重要的通识性必修基础课。
+                大学物理课程既为学生打好必要的物理基础，又在培养学生科学的世界观、增强学生分析问题和
+                解决问题的能力、培养学生的探索精神和创新意识等方面，具有其他课程不能替代的重要作用。
+            </p>
+            
+            <h2>课程重要性</h2>
+            <p>
+                大学物理是理工科教育的核心组成部分，其重要意义体现在多个方面：
+            </p>
+            <ul>
+                <li>为学生建立正确的自然观和科学的世界观</li>
+                <li>为学生学习后续专业课程（如机械、电气、材料等）提供理论基础</li>
+                <li>培养学生的科学思维方法和实验研究能力</li>
+                <li>促进学生创新意识和解决实际问题能力的发展</li>
+                <li>为学生持续学习和专业发展奠定根基</li>
+            </ul>
+            
+            <h2>学习目标</h2>
+            <div class="objectives">
+                <ul>
+                    <li>深入理解物理学的基本概念和规律</li>
+                    <li>掌握物理现象的分析和解决方法</li>
+                    <li>培养科学实验和数据处理能力</li>
+                    <li>了解物理学在现代技术中的应用</li>
+                    <li>提升逻辑推理和科学思维能力</li>
+                    <li>培养探索精神和创新意识</li>
+                </ul>
+            </div>
+            
+            <h2>主要课程内容</h2>
+            <div class="chapter-list">
+                <ul>
+                    <li><span class="highlight">质点运动学</span> - 运动的描述、速度、加速度、运动方程的求解</li>
+                    <li><span class="highlight">牛顿力学</span> - 牛顿三定律、力的合成与分解、重力和万有引力</li>
+                    <li><span class="highlight">功能关系</span> - 功的概念、动能定理、势能、机械能守恒</li>
+                    <li><span class="highlight">刚体运动</span> - 转动惯量、角动量、刚体转动方程</li>
+                    <li><span class="highlight">流体力学基础</span> - 液体压强、浮力、流体流动</li>
+                    <li><span class="highlight">振动与波动</span> - 简谐振动、波的传播、干涉衍射现象</li>
+                    <li><span class="highlight">热学基础</span> - 温度、热量、热力学第一第二定律</li>
+                    <li><span class="highlight">静电学</span> - 电场、电势、高斯定律、导体和绝缘体</li>
+                    <li><span class="highlight">电流与磁场</span> - 电流、电阻、欧姆定律、洛伦兹力、磁场</li>
+                    <li><span class="highlight">电磁感应</span> - 法拉第定律、楞次定律、交流电基础</li>
+                    <li><span class="highlight">光学基础</span> - 几何光学、光的干涉衍射、偏振</li>
+                    <li><span class="highlight">近代物理初步</span> - 量子论基础、原子物理、核物理初步</li>
+                </ul>
+            </div>
+            
+            <h2>学习成果</h2>
+            <div class="outcomes">
+                <ul>
+                    <li><strong>理论理解：</strong>系统掌握物理学基本理论和定律</li>
+                    <li><strong>问题解决：</strong>能够分析和解决典型物理问题</li>
+                    <li><strong>实验能力：</strong>掌握基础物理实验原理和操作技能</li>
+                    <li><strong>应用能力：</strong>理解物理学原理在技术中的应用</li>
+                    <li><strong>思维能力：</strong>培养科学的系统思维和创新意识</li>
+                    <li><strong>学习能力：</strong>学会自主学习和知识迁移</li>
+                </ul>
+            </div>
+            
+            <h2>教学方法</h2>
+            <ul>
+                <li><strong>课堂讲授：</strong>系统讲解物理基本原理和规律</li>
+                <li><strong>问题导向：</strong>通过问题激发学生的思维</li>
+                <li><strong>实验教学：</strong>开展配套的物理实验课程</li>
+                <li><strong>多媒体应用：</strong>使用仿真软件和可视化工具</li>
+                <li><strong>小组讨论：</strong>合作学习和知识交流</li>
+                <li><strong>案例分析：</strong>通过现实应用理解物理原理</li>
+            </ul>
+            
+            <h2>实验教学</h2>
+            <p>
+                大学物理配套有系列实验课程，主要包括：
+            </p>
+            <ul>
+                <li>长度、时间、质量等物理量的测量</li>
+                <li>力学实验：力的合成、牛顿定律、转动惯量等</li>
+                <li>热学实验：热容、热导率、热机效率等</li>
+                <li>电学实验：电阻、电功率、电磁感应等</li>
+                <li>光学实验：凸透镜成像、光的干涉衍射等</li>
+                <li>数据处理和误差分析</li>
+            </ul>
+            
+            <h2>主要难点与学习建议</h2>
+            <ul>
+                <li><strong>物理概念理解：</strong>注重概念的深层含义，不止追求计算结果</li>
+                <li><strong>数学工具应用：</strong>掌握必要的数学方法，特别是矢量和微积分</li>
+                <li><strong>问题求解方法：</strong>学习系统的分析方法和解题思路</li>
+                <li><strong>实验技能训练：</strong>重视实验的全过程，从设计到数据分析</li>
+                <li><strong>持续练习：</strong>通过大量习题加深理解和掌握</li>
+            </ul>
+            
+            <h2>参考资源</h2>
+            <div class="resources">
+                <ul>
+                    <li>标准教科书《大学物理》及配套习题集</li>
+                    <li>教师开发的讲义和教学课件</li>
+                    <li>物理学视频教程和在线学习平台</li>
+                    <li>物理模拟软件（PhET、Interactive Physics等）</li>
+                    <li>物理学参考书和综合性教材</li>
+                    <li>过往试题和例题详解</li>
+                </ul>
+            </div>
+            
+            <h2>职业应用前景</h2>
+            <p>
+                学好大学物理对以下领域的工作具有重要帮助：
+            </p>
+            <ul>
+                <li>工程技术领域 - 机械、电气、土木等专业工作</li>
+                <li>研发创新 - 新产品开发和技术改进</li>
+                <li>现代技术应用 - 电子设备、光通信、能源等领域</li>
+                <li>科学研究 - 从事物理及相关学科研究</li>
+                <li>教育培训 - 物理教学和科学传播</li>
+            </ul>
+            
+            <div class="btn-group">
+                <a href="courses.html" class="btn btn-primary">返回课程列表</a>
+                <a href="courses.html" class="btn btn-secondary">联系我们</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2026 大学物理课程中心 | University Physics Course Center</p>
+            <p>探索自然奥秘，开启科学新篇章 | Explore Nature's Mysteries, Unlock Scientific Innovation</p>
+        </footer>
+    </div>
+</body>
+</html>

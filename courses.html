@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专业课程简介</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", "SimHei", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .course-header {
+            padding: 25px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        
+        .course-header.english {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .course-header.math {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .course-header.physics {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .course-content {
+            padding: 25px;
+        }
+        
+        .course-intro {
+            color: #333;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            line-clamp: 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .course-features {
+            margin: 15px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .feature-item {
+            padding: 8px 0;
+            border-left: 3px solid #667eea;
+            padding-left: 12px;
+            margin-bottom: 8px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 15px;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        footer p {
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 专业课程简介</h1>
+            <p class="subtitle">Professional Course Introductions</p>
+        </header>
+        
+        <div class="course-grid">
+            <!-- 英语课程 -->
+            <div class="course-card">
+                <div class="course-header english">📚 英语专业</div>
+                <div class="course-content">
+                    <div class="course-intro">
+                        英语专业课程体系包括语言技能、文学素养和文化交际等多个维度，培养学生在国际交流中的竞争力。
+                    </div>
+                    <div class="course-features">
+                        <div class="feature-item">✓ 综合语言技能训练</div>
+                        <div class="feature-item">✓ 英美文学经典研读</div>
+                        <div class="feature-item">✓ 实践翻译能力培养</div>
+                    </div>
+                    <a href="course_english.html" class="btn">查看详细介绍</a>
+                </div>
+            </div>
+            
+            <!-- 高等数学课程 -->
+            <div class="course-card">
+                <div class="course-header math">📐 高等数学</div>
+                <div class="course-content">
+                    <div class="course-intro">
+                        《高等数学》是理工科学生的核心基础课程，为后续专业课学习奠定坚实的数学基础。
+                    </div>
+                    <div class="course-features">
+                        <div class="feature-item">✓ 微积分核心理论</div>
+                        <div class="feature-item">✓ 数学思维能力培养</div>
+                        <div class="feature-item">✓ 工程应用案例分析</div>
+                    </div>
+                    <a href="course_math.html" class="btn">查看详细介绍</a>
+                </div>
+            </div>
+            
+            <!-- 大学物理课程 -->
+            <div class="course-card">
+                <div class="course-header physics">⚛️ 大学物理</div>
+                <div class="course-content">
+                    <div class="course-intro">
+                        大学物理课程涵盖现代科学基础知识，培养学生科学思维和问题解决能力。
+                    </div>
+                    <div class="course-features">
+                        <div class="feature-item">✓ 物理学基础理论</div>
+                        <div class="feature-item">✓ 实验科学精神培养</div>
+                        <div class="feature-item">✓ 技术应用实践指导</div>
+                    </div>
+                    <a href="course_physics.html" class="btn">查看详细介绍</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2026 专业课程中心 | Professional Course Center</p>
+            <p>为学生成功奠定坚实基础 | Building Strong Foundations for Student Success</p>
+        </footer>
+    </div>
+</body>
+</html>
